@@ -40,9 +40,10 @@ def Data(request, id=0):
             return JsonResponse("Updated Successfully",safe=False)
 
     elif request.method == 'DELETE':
-        Register=Register.objects.get(S_No=request.data["S_No"])
+        data=request.data
+        Register=Register.objects.get(S_No=data["S_No"])
         Register.delete()
-        return JsonResponse("The record has been deleted successfully!")
+        return JsonResponse("deleted successfully!")
 
 
 
