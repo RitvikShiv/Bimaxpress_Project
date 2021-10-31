@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Register'
+    'app'
 ]
 
 MIDDLEWARE = [
@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'bimaxpress.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'Register',
+        'NAME': 'Demo',
         
 
     }
@@ -92,7 +92,7 @@ DATABASES = {
 
 
 from mongoengine import connect
-MONGO_DATABASE_NAME = 'Register'
+MONGO_DATABASE_NAME = 'Demo'
 MONGO_HOST = '127.0.0.1'
 MONGO_PORT = 27017
 connect(MONGO_DATABASE_NAME, host=MONGO_HOST, port=MONGO_PORT)
